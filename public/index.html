@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Server</title>
+</head>
+<body class="bg-[#091b0f] text-[springgreen]">
+   <div class="m-1 md:m-3">
+    <header class="py-7 border-2 border-[springgreen]">
+        <h1 class="text-center underline text-6xl mb-5">Person API</h1>
+        <h3 class="text-center pt-3 lg:pt-5 text-2xl lg:text-4xl">An Api which gives information about a random person</h3>
+    </header>
+   </div>
+    <div class="m-3 md:m-4">
+        <main class="py-5  mt-6 text-center text-xl">
+            <div class="md:px-6 leading-8">
+                <p class="mt-2 ">
+                    Has data about 20000 random generated people names.
+                </p>
+                <p class="mt-2">
+                    The data is in the format as given
+                </p>
+            </div>
+            
+            <div class="mt-5 mb-10">
+                
+                <code>
+                        { id: 1, fname: "kristen", lname: "griffi", occupation: "police", age: "31"}
+                </code>
+            </div>
+            <div class="py-7">
+                <form action="/api/query" method="get">
+                    <label for="query" class="font-semibold text-2xl">Find Query</label>
+                    <br>
+                    <input type="text" name="query" placeholder="Eg. John" class="mt-3 border-2 border-[#03f57c] bg-[#091b0f] text-white font-mono py-2 px-6 active:outline-none focus:border-[#03f57c]focus:ring-1 focus:ring-[#03f57c] invalid:border-red-500 invalid:text-red-600
+      focus:invalid:border-red-500 focus:invalid:ring-red-500 rounded-md text-center">
+                    <br class="mb-7">
+                
+                    <label for="maxVal" class="font-semibold text-2xl">Max Results</label>
+                    <br class="mt-5">
+                    <input type="number" name="maxVal" placeholder="10" class="mt-3 border-2 border-[#03f57c] bg-[#091b0f] text-white font-mono py-2 px-6 active:outline-none focus:border-[#03f57c]focus:ring-1 focus:ring-[#03f57c] invalid:border-red-500 invalid:text-red-600
+      focus:invalid:border-red-500 focus:invalid:ring-red-500 rounded-md text-center">
+                    <br>
+                    <input type="submit" value="Submit" class="mt-7 border-[#03f57c] border-2 px-6 py-2 rounded-2xl hover:bg-[#03f57c] hover:text-[#091b0f] font-semibold">
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer class="text-center">
+        <p>Made by Ritvik.</p>
+    </footer>
+</body>
+</html>
