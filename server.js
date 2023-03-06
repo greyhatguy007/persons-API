@@ -4,22 +4,22 @@ const path = require("path");
 const morgan = require("morgan");
 
 const port = 3000;
-const verbose = false;
 
 const app = express();
 
-app.use(express.urlencoded({ extended: true }));
-app.use("/api", router);
-app.use(express.static(path.resolve(__dirname, "public")));
-
+const verbose = false;
 
 if (verbose) {
   app.use(morgan("tiny"));
 }
 
 
+app.use(express.urlencoded({ extended: true }));
+app.use("/api", router);
+app.use(express.static(path.resolve(__dirname, "public")));
+
 app.get("/", (req, res) => {
-  res.status(200).sendFile(path.resolve(__dirname,"public", "index.html"));
+  res.status(200).sendFile(path.resolve(__dirname, "public", "index.html"));
 });
 
 app.all("*", (req, res) => {
