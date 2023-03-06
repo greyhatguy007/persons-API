@@ -57,3 +57,10 @@
     Example:
     
     `http://localhost:3000/api/id/15325`
+
+<hr>
+
+
+<u><h2>When Deployed - UI</h2></u>
+
+![ui-of-api](/public/imgs/ui.png)
