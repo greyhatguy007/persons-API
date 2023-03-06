@@ -15,6 +15,12 @@ router.get("/id/:id", (req, res) => {
   res.json({ success: true, result: toSend });
 });
 
+router.get("/random", (req, res) => {
+  let randIndex = Math.floor(Math.random() * 20000 + 1);
+  const toSend = persons.filter((person) => person.id === randIndex);
+  res.send(toSend);
+});
+
 router.get("/query", (req, res) => {
   let { query, maxVal } = req.query;
   query = query.toLowerCase();
@@ -33,7 +39,8 @@ router.get("/query", (req, res) => {
       person.fname === query ||
       person.lname === query ||
       person.occupation === query ||
-      person.id === Number(query)
+      person.id === Number(query) ||
+      person.age === Number(query)
   );
   if (toSend.length < 1) {
     return res.json({ success: true, result: "No Matches Found" });

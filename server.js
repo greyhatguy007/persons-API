@@ -17,9 +17,6 @@ if (verbose) {
   app.use(morgan("tiny"));
 }
 
-// app.get('/public/styles.css', (req, res) => {
-//   res.status(200).sendFile(path.resolve(__dirname, "public", "styles.css"));
-// })
 
 app.get("/", (req, res) => {
   res.status(200).sendFile(path.resolve(__dirname,"public", "index.html"));

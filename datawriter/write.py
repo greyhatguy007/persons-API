@@ -19,7 +19,7 @@ for i in range(1,20001):
     fname = fnames[random.randint(0, len(fnames)-1)].lower()
     lname = lnames[random.randint(0, len(lnames)-1)].lower()
     age = random.randint(19,45)
-    mid = f' id: {i}, fname: "{fname}", lname: "{lname}", occupation: "{occupation}", age: "{age}"'
+    mid = f' id: {i}, fname: "{fname}", lname: "{lname}", occupation: "{occupation}", age: {age}'
     mid = "{" + mid + "},"
     l.append(mid)
 l.append("];")
