@@ -3,7 +3,11 @@
 
 **Note :** *The API is not yet hosted.*
 
+<br>
+
 <u><h2>Usage:</h2></u>
+
+<br>
 
 - Clone the repository
 
@@ -29,6 +33,8 @@
 <hr>
 
 <u><h2>API Queries - Url</h2></u>
+
+<br>
 
 - To get all data
     
@@ -60,7 +66,48 @@
 
 <hr>
 
+<u><h2>Usage of api - An example</h2></u>
+
+<br>
+
+
+To fetch a random data from terminal when deployed.
+```sh
+curl http://localhost:3000/api/random
+```
+<br>
+
+To fetch a random data in a javascript file when deployed.
+```js
+const http = require('http');
+
+const url = "http://localhost:3000/api/random";
+
+http.get(url, (res) => {
+    res.on("data", (data) => {
+        console.log(JSON.parse(data));
+    });
+}).on("error", (err) => {
+    console.log(`Error\n${err}`);
+});
+```
+<br>
+
+Output recieved
+```json
+{
+    id: 16930,
+    fname: "megan",
+    lname: "thoma",
+    occupation: "teacher",
+    age: 24
+  }
+```
+
+<hr>
 
 <u><h2>When Deployed - UI</h2></u>
+
+<br>
 
 ![ui-of-api](/public/imgs/ui.png)
