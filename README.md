@@ -94,7 +94,7 @@ http.get(url, (res) => {
 <br>
 
 Output recieved
-```json
+```
 {
     id: 16930,
     fname: "megan",
